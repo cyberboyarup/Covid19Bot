@@ -142,7 +142,7 @@ Deaths :  *{regional_data[index]['deaths']:,}*"
         join = '\n'.join(district_name_data)
         last_time = f"Last Updated on :  *{date_time}*"
         last_data = f"{state_wise_data}\n{join}\n\n{last_time}"
-        query.edit_message_text(last_data, parse_mode="Markdown")
+        query.edit_message_text(last_data, parse_mode="MarkdownV2")
 
 
 def allstate(update, context):
