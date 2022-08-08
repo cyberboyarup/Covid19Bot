@@ -41,13 +41,13 @@ logger = logging.getLogger(__name__)
 def start(update, context):
     """Send a message when the command /start is issued."""
     update.message.reply_text(
-        f'*Welcome to Covid19 Tracker BOT By-Arup Mandal*\.\n*Enter  _/help_  to see Commands* ', parse_mode="MarkdownV2")
+        f'*Welcome to Covid19 Tracker BOT By-Arup Mandal*\.\n*Enter  _/help_  to see Commands* ', parse_mode='markdown')
 
 
 def stats(update, context):
     """ It will send Stats On running """
     update.message.reply_text(
-        stats_all+"\n"+last_update, parse_mode="MarkdownV2")
+        stats_all+"\n"+last_update, parse_mode='markdown')
 
 
 def state_wise(update, context):
@@ -142,7 +142,7 @@ Deaths :  *{regional_data[index]['deaths']:,}*"
         join = '\n'.join(district_name_data)
         last_time = f"Last Updated on :  *{date_time}*"
         last_data = f"{state_wise_data}\n{join}\n\n{last_time}"
-        query.edit_message_text(last_data, parse_mode="MarkdownV2")
+        query.edit_message_text(last_data, parse_mode='markdown')
 
 
 def allstate(update, context):
@@ -156,15 +156,15 @@ Total :   *{regional_data[data]['totalConfirmed']:,}*\n\
 Recovered :   *{regional_data[data]['discharged']:,}*\n\
 Deaths :   *{regional_data[data]['deaths']:,}*\n\n"
 
-        update.message.reply_text(state_wise_data, parse_mode="MarkdownV2")
+        update.message.reply_text(state_wise_data, parse_mode='markdown')
 
-    update.message.reply_text(last_update, parse_mode="MarkdownV2")
+    update.message.reply_text(last_update, parse_mode='markdown'")
 
 
 def help_command(update, context):
     update.message.reply_text("_/stats_ \- Check Overall Stats\n\
 _/state_ \- Choose cases States & UT's\n\
-_/allstate_ \- To Check All state Cases ", parse_mode="MarkdownV2")
+_/allstate_ \- To Check All state Cases ", parse_mode='markdown')
 
 
 def echo(update, context):
